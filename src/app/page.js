@@ -9,12 +9,11 @@ export default function MyApp() {
 
   // Show loading component while checking auth status
   if (loading) return <Loading />
+  console.log('ssim', user)
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <UserStatus user={user} />
-      </div>
-    </main>
+    <div className="flex-1 p-6 min-w-[500px] max-w-[500px]">
+      <UserStatus user={user} />
+    </div>
   )
 }
